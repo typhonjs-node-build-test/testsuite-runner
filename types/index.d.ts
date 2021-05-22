@@ -4,9 +4,12 @@
 declare class TestsuiteRunner {
     /**
      * @param {object}   tests - The test modules which have an accessible run function.
+     *
+     * @param {object}   [data] - Any static data containing directives for the tests.
      */
-    constructor(tests: object);
+    constructor(tests: object, data?: object);
     _tests: any;
+    _data: any;
     /**
      * Run the stored tests against the given ES Module.
      *

@@ -18,12 +18,17 @@ export default class TestsuiteRunner
 {
    /**
     * @param {object}   tests - The test modules which have an accessible run function.
+    *
+    * @param {object}   [data] - Any static data containing directives for the tests.
     */
-   constructor(tests)
+   constructor(tests, data = {})
    {
       if (typeof tests !== 'object') { throw new TypeError(`'tests' must be an object.`); }
+      if (typeof data !== 'object') { throw new TypeError(`'data' must be an object.`); }
 
       this._tests = tests;
+
+      this._data = data;
    }
 
    /**
@@ -59,7 +64,11 @@ export default class TestsuiteRunner
 
       mocha.checkLeaks();
 
-      const testOptions = Object.assign({ Module, data, chai }, options);
+      const testOptions = Object.assign({
+         Module,
+         data: Object.assign({}, this._data, data),
+         chai
+      }, options);
 
       for (const test in this._tests)
       {
