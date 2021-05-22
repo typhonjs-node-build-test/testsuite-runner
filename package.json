@@ -31,6 +31,7 @@
   "types": "./types/index.d.ts",
   "files": [
     "/npm-shrinkwrap.json",
+    "/dist",
     "/lib",
     "/src",
     "/types"
