@@ -29,6 +29,8 @@ export default class TestsuiteRunner
       this._tests = tests;
 
       this._data = data;
+
+      this._data.isBrowser = true;
    }
 
    /**
