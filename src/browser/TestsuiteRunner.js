@@ -29,8 +29,6 @@ export default class TestsuiteRunner
       this._tests = tests;
 
       this._data = data;
-
-      this._data.isBrowser = true;
    }
 
    /**
@@ -66,9 +64,18 @@ export default class TestsuiteRunner
 
       mocha.checkLeaks();
 
+      const testsuiteData =  Object.assign({}, this._data, data);
+      testsuiteData.scopedName = `browser/${testsuiteData.name ? testsuiteData.name : '?'}`;
+
+      const env = {
+         isBrowser: true,
+         isNode: false
+      }
+
       const testOptions = Object.assign({
          Module,
-         data: Object.assign({}, this._data, data),
+         data: testsuiteData,
+         env,
          chai
       }, options);
 

@@ -21,8 +21,6 @@ export default class TestsuiteRunner
       this._tests = tests;
 
       this._data = data;
-
-      this._data.isBrowser = false
    }
 
    /**
@@ -48,9 +46,15 @@ export default class TestsuiteRunner
          chai.use(chaiAddon);
       }
 
+      const testsuiteData =  Object.assign({}, this._data, data);
+      testsuiteData.scopedName = `browser/${testsuiteData.name ? testsuiteData.name : '?'}`;
+
+      const env = Object.assign({}, process.env, { isBrowser: true, isNode: false });
+
       const testOptions = Object.assign({
          Module,
-         data: Object.assign({}, this._data, data),
+         data: testsuiteData,
+         env,
          chai
       }, options);
 
