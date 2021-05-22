@@ -70,7 +70,7 @@ export default class TestsuiteRunner
       const env = {
          isBrowser: true,
          isNode: false
-      }
+      };
 
       const testOptions = Object.assign({
          Module,
