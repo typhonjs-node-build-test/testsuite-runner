@@ -1,7 +1,7 @@
 {
   "name": "@typhonjs-build-test/testsuite-runner",
   "description": "Provides a testsuite runner for Node & browser.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Michael Leahy <support@typhonjs.io> (https://github.com/typhonrt)",
   "type": "module",
   "main": "src/node/TestsuiteRunner.js",
@@ -32,7 +32,6 @@
   "files": [
     "/npm-shrinkwrap.json",
     "/dist",
-    "/lib",
     "/src",
     "/types"
   ],
