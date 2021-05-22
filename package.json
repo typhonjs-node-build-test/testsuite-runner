@@ -39,10 +39,10 @@
   "homepage": "https://github.com/typhonjs-node-utils/build-test-browser#readme",
   "keywords": [
     "typhonjs",
-    "utils",
     "build",
     "test",
-    "browser"
+    "testsuite",
+    "runner"
   ],
   "license": "MPL-2.0",
   "bugs": "https://github.com/typhonjs-node-utils/build-test-browser/issues",
