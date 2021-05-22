@@ -18,7 +18,7 @@ declare class TestsuiteRunner {
      *
      * @param {object}      [options.mochaOptions] - Specific options for Mocha.
      *
-     * @param {function[]}  [options.chaiUse] - Additional modules for chai setup via `chai.use(<module>)`.
+     * @param {Function[]}  [options.chaiUse] - Additional modules for chai setup via `chai.use(<module>)`.
      *
      * @param {object}      [options.options] - Additional options to pass to the testsuite.
      */

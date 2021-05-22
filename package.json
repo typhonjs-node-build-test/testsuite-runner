@@ -50,7 +50,7 @@
   "scripts": {
     "bundle": "rollup --config",
     "eslint": "eslint .",
-    "prepublishOnly": "npm run npm run eslint",
+    "prepublishOnly": "npm run bundle && npm run eslint",
     "types": "npx -p typescript tsc --project tsconfig.types.json && rollup --config rollup.config.types.js"
   }
 }

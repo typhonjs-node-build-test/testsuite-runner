@@ -27,7 +27,7 @@ export default class TestsuiteRunner
     *
     * @param {object}      [options.data] - Optional data to pass to testsuite.
     *
-    * @param {function[]}  [options.chaiUse] - Additional modules for chai setup via `chai.use(<module>)`.
+    * @param {Function[]}  [options.chaiUse] - Additional modules for chai setup via `chai.use(<module>)`.
     *
     * @param {object}      [options.options] - Additional options to pass to the testsuite.
     */
@@ -45,7 +45,7 @@ export default class TestsuiteRunner
 
       for (const test in this._tests)
       {
-         if (this._tests.hasOwnProperty(test))
+         if (this._tests.hasOwnProperty(test))  // eslint-disable-line no-prototype-builtins
          {
             this._tests[test].run(testOptions);
          }
