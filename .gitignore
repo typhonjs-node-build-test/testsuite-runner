@@ -1,0 +1,9 @@
+.idea
+.DS_Store
+npm-debug.log
+*-debug.log
+*-error.log
+/.nyc_output
+node_modules
+/dist
+/lib-ts

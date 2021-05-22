@@ -1,0 +1,15 @@
+{
+  "include": [
+    "./src/browser/TestsuiteRunner.js",
+  ],
+
+  "compilerOptions": {
+    "allowJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "moduleResolution": "node",
+    "module": "ES2020",
+    "target": "ES2020",
+    "outDir": "./lib-ts"
+  }
+}
