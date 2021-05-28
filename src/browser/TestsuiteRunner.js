@@ -65,7 +65,7 @@ export default class TestsuiteRunner
       mocha.checkLeaks();
 
       const testsuiteData =  Object.assign({}, this._data, data);
-      testsuiteData.scopedName = `browser/${testsuiteData.name ? testsuiteData.name : '?'}`;
+      testsuiteData.scopedName = `browser${testsuiteData.name ? `/${testsuiteData.name}` : ''}`;
 
       const env = {
          isBrowser: true,
