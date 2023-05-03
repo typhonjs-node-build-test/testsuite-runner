@@ -1,7 +1,7 @@
 {
   "name": "@typhonjs-build-test/testsuite-runner",
   "description": "Provides a testsuite runner for Node & browser.",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "Michael Leahy <support@typhonjs.io> (https://github.com/typhonrt)",
   "type": "module",
   "main": "src/node/TestsuiteRunner.js",
@@ -18,15 +18,12 @@
   "contributors": [
     "Michael Leahy <support@typhonjs.io> (https://github.com/typhonrt)"
   ],
-  "dependencies": {
+  "devDependencies": {
+    "rollup": "^3"
+  },
+  "peerDependencies": {
     "chai": "^4",
     "chai-as-promised": "^7"
-  },
-  "devDependencies": {
-    "@typhonjs-utils/build-test": "^0.1.0",
-    "rollup": "^2",
-    "rollup-plugin-dts": "^3.0.0",
-    "rollup-plugin-terser": "^7"
   },
   "types": "./types/index.d.ts",
   "files": [
@@ -49,7 +46,6 @@
   "scripts": {
     "bundle": "rollup --config",
     "eslint": "eslint .",
-    "prepublishOnly": "npm run bundle && npm run eslint",
-    "types": "npx -p typescript tsc --project tsconfig.types.json && rollup --config rollup.config.types.js"
+    "prepublishOnly": "npm run bundle && npm run eslint"
   }
 }
