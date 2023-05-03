@@ -9,7 +9,7 @@
  *
  * @param {boolean}  [useColors=true] - Output console colors.
  */
-export default function mochaConsoleLog(runner, useColors = true)
+export function mochaConsoleLog(runner, useColors = true)
 {
    /* eslint-disable no-undef */
    Mocha.reporters.Spec.super_.consoleLog = (...args) => { console.log('[MOCHA]', ...args); };

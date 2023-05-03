@@ -2,7 +2,7 @@ import chai                  from '../../lib/chai.js';
 import chaiAsPromised        from '../../lib/chai-as-promised.js';
 import mocha                 from '../../lib/mocha.js';
 
-import mochaConsoleLog       from './mochaConsoleLog.js';
+import { mochaConsoleLog }   from './mochaConsoleLog.js';
 
 chai.use(chaiAsPromised);
 
@@ -14,7 +14,7 @@ const s_DEFAULT_MOCHA_OPTIONS = {
 /**
  * Provides a testsuite runner to be able to run the same testsuite on Node and in the browser.
  */
-export default class TestsuiteRunner
+export class TestsuiteRunner
 {
    /**
     * @param {object}   tests - The test modules which have an accessible run function.

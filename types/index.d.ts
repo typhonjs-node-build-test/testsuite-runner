@@ -34,4 +34,4 @@ declare class TestsuiteRunner {
     }): void;
 }
 
-export default TestsuiteRunner;
+export { TestsuiteRunner };

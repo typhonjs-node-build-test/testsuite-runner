@@ -6,7 +6,7 @@ chai.use(chaiAsPromised);
 /**
  * Provides a testsuite runner to be able to run the same testsuite on Node and in the browser.
  */
-export default class TestsuiteRunner
+export class TestsuiteRunner
 {
    /**
     * @param {object}   tests - The test modules which have an accessible run function.
