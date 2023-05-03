@@ -19,6 +19,8 @@
     "Michael Leahy <support@typhonjs.io> (https://github.com/typhonrt)"
   ],
   "devDependencies": {
+    "@typhonjs-config/eslint-config": "^0.6.0",
+    "eslint": "^8",
     "rollup": "^3"
   },
   "peerDependencies": {
